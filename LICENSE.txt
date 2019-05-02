@@ -1,0 +1,215 @@
+				Logo Yazılım 
+		Yazılım Ürünleri Kullanma Lisansı ve Garanti Sözleşmesi
+1. Taraflar
+1.1 Logo Yazılım
+(Adres) 1.2.............................................
+........................................................
+........................................................
+..................................(MÜŞTERİ olarak anılacak)
+
+2.  SÖZLEŞMENİN KONUSU
+2.1.  Bu sözleşme ile MÜŞTERİ, sözleşmenin sonunda belirtilen yazılım
+ürününün veya ürünlerinin, yazılımın çalışmasına uygun konfigürasyonda
+kullanım lisansını almaktadır.
+
+3.  KULLANIM LİSANSININ KAPSAMI
+3.1.  GENEL:
+3.1.1.  Kullanım lisansı MÜŞTERİye, yazılımları bir bilgisayarda kurma,
+daimi olarak kullanma ve sadece yedekleme amacıyla kopyalama hakkı verir.
+3.1.2. Kullanım lisansı, yazılımların bilgisayara yüklenmesi,
+çalıştırılması, kullanılması, görüntülenmesi,depolanması ve yedeğinin
+alınması haklarını kapsar.
+3.1.3.  MÜŞTERİ, yazılımları ödünç vermek, kiralamak gibi bedelli
+veya bedelsiz hiçbir biçimde üçüncü kişilerin yararına sunamaz,
+kullandıramaz. Aynı iletişim ağını paylaşan ve aynı sunucudan yararlanan
+kardeş şirketler bu hükmün dışındadır. (Bkz. Madde 3.3)
+3.1.4. Münhasır olmayan bu hakkın dışında kalan tüm diğer telif
+hakları ve mülkiyet hakkı LOGO üzerinde kalır ve bu sözleşme kapsamı
+dışındadır.
+3.1.5. Bu Kullanım Lisans Sözleşmesi kuralları, bu sözleşme kapsamında
+yer alabilecek ve telif hakları -şayet kendi özel lisans sözleşmeleri
+yoksa- LOGO'ya ait olmayan yazılım ürünleri için de aynen geçerlidir.
+3.1.6.  Bu sözleşmeden doğan hak ve yükümlülükler hiçbir şekilde
+üçüncü bir kişiye devredilemez.
+3.2.  TEK BİLGİSAYARDA KULLANIM:
+MÜŞTERİ yazılımları her ne şartla olursa olsun aynı anda iki veya
+daha fazla bilgisayarın sabit-disk veya disket/CD-ROM sürücüsüne kuramaz.
+MÜŞTERİ yazılımları ayni sabit-diske birden fazla kopya olarak yükleyip,
+farklı işlemler için kullanamaz.
+3.3.  BİLGİSAYAR İLETİŞİM AĞINDA (NETWORK) KULLANIM:
+MÜŞTERİ yazılımları, lisansta belirlenen kullanıcı sayısını aşmamak ve
+birden fazla sunucu (file-server)ya yüklememek şartıyla bir bilgisayar
+iletişim ağı (network) altında kurabilir ve kullanabilir. Ancak yazılımın
+birden fazla sunucuya yüklenmesi ya da lisansta belirtilenden fazla
+kullanıcı tarafından kullanılabilmesi için yeni bir yazılım paketi
+veya ek kullanıcı lisansı satın alınmalıdır. MÜŞTERİ, bu maddeyi
+ihlal etmemek kaydıyla, yazılım üzerinde birden fazla firmanın
+bilgilerini işleyebilir.
+
+4.  AYIPLI ÜRÜN VE KULLANICI HAKLARI
+Arızalı çıkan yazılımlar, kayıtlı olduğu disket/CD-ROM ve yazılı
+doküman, fatura tarihinden itibaren en geç 15 gün içinde iade edildiği
+takdirde yenisi ile değiştirilir veya bedeli karşılığında iade alınır
+veya arızalı malzemenin bedeli satış fiyatından düşülür. MÜŞTERİ bu
+hakkını, faturası ile birlikte yazılımı satın aldığı Logo Yetkili
+Satıcısına başvurarak kullanır. MÜŞTERİ, belirtilen süreden sonra
+ayıplı mal itirazında bulunamaz. Bu istisnanın dışında yazılımlar
+iade edilemez ve yenisi ile değiştirilemez. 
+
+5. GARANTİ VE LOGO'NUN SORUMLULUKLARININ SINIRLANMASI
+5.1.  LOGO yazılım ürünlerinin garanti süresi fatura tarihinden
+itibaren bir yıldır. Telif hakları LOGO'ya ait olmayan yazılımların
+lisans ve garanti koşulları, söz konusu yazılımlarla birlikte sağlanan
+dokümantasyonda belirtilmektedir. 
+5.2. LOGO yazılım ürünlerinin dokümantasyonlarıyla uyum içinde olması ve
+matbu ve/veya manyetik ortamda sağlanan dokümantasyonlarında tanımlanan
+işlevleri en iyi şekilde yerine getirmesi için gerekli azami özeni
+göstermektedir. LOGO, bu yazılımların kusursuz, hatasız, mükemmel olduğu
+ve kullanıcının özel ihtiyaçlarını tamamen karşılayacağı şeklinde bir
+iddia ve taahhütte bulunmaz.
+5.3.  LOGO, donanım veya işletim sistemi arızasından, LOGO tarafından
+temin edilmiş olsa dahi telif hakları LOGO'ya ait olmayan veritabanı
+yazılımından, iletişim ağı (network) tasarım ve bağlantı hatalarından,
+voltaj dalgalanması ve elektrik kesilmesinden, virüs bulaşmasından ve
+benzeri çevresel faktörler ve kullanıcı hatalarından kaynaklanacak
+bilgi ve yazılım kayıplarından sorumlu tutulamaz.
+
+
+5.4.  LOGO, manyetik ortamda saklanan bilgileri garanti edemez.
+Yazılımların kullanılması ile oluşan bilgilerin düzenli olarak
+yedeğinin alınmasından kullanıcı sorumludur.
+5.5.  MÜŞTERİ, kullanım lisansını aldığı yazılımları, yazılım
+dokümantasyonunda belirtilen asgari teknik özelliklere sahip bir
+donanım üzerinde kullanacağını ve gerekli bu donanımı kendisinin
+temin edeceğini, LOGO'nun yazılım-donanım uyuşmazlığı ile ilgili
+hiçbir maddi ve hukuki sorumluluğunun bulunmadığını, LOGO'nun
+sorumluluk sınırının Sözleşme konusu yazılım ürünleri için kullanım
+lisansı verilmesi ile sınırlı olduğunu beyan, kabul ve taahhüt eder.
+5.6. LOGO, yazılım ürünlerinin yanlış kullanımından veya hukuka aykırı
+işlerde veya kanuna aykırı olarak kullanılmasından dolayı ortaya
+çıkabilecek maddi, manevi, hukuki ve mali sonuçlardan, kazanç veya
+kayıplardan hiçbir biçimde sorumlu değildir.
+5.7.  Taraflar, doğrudan veya dolaylı olarak bu Sözleşmeden
+kaynaklanacak kendi aralarındaki tüm ihtilaflarda diğer taraftan
+talep edebilecekleri her türlü tazminat miktarının (mali sorumluluğun)
+MÜŞTERİ'nin lisans bedeli olarak ödediği miktarla sınırlı olduğunu
+beyan, kabul ve taahhüt etmişlerdir. Fikir ve Sanat Eserleri Kanunu'nu
+ihlal eden eylemler saklı kalmak kaydıyla, tazminat talebini haklı
+kılan herhangi bir durumda LOGO, MÜŞTERİ'den sadece bu Sözleşmenin
+toplam bedeli kadar tazminat talep edebilir. MÜŞTERİ de herhangi bir
+nedenle yazılım lisansını iade hakkı doğduğunda, yazılımlar için ödediği
+lisans bedeli dışında herhangi bir nam altında tazminat talebinde
+bulunmamayı peşinen kabul ve taahhüt eder. Taraflar, bu şekilde
+karşılıklı olarak sorumluluklarını sınırlamışlardır. 
+5.8.  LOGO, MÜŞTERİ'nin yazılımı kullanmaya başladığı (ilk kez şifre
+aldığı) tarihten itibaren 3 (üç) ay süre ile MÜŞTERİ'ye limitsiz
+telefon desteğini ücretsiz olarak verir. Bu sürenin bitiminden sonra
+MÜŞTERİ dilerse LOGO'dan satın alacağı "LOGO TELE-DESTEK HİZMET PAKETİ"
+ile bu desteği almaya devam eder. 
+5.9.  Taraflar, LOGO'nun bu Sözleşme konusu yazılımlar üzerinde
+MÜŞTERİ'ye yalnızca "kullanım lisansı" verdiğini, MÜŞTERİ'nin
+üretkenlik, iş, gelir ve/veya kâr kaybı, yazılımın yerelleştirilmesi,
+yazılımın ve verilerin kullanılması gibi nedenlerle ortaya çıkabilecek
+herhangi bir kayıp veya zarar (akde/haksız fiile dayalı zararları)
+konularında LOGO'nun hiç bir sorumluluğu olmadığı için bunları tazmin
+etmekle yükümlü olmayacağını peşinen beyan, kabul ve taahhüt
+etmişlerdir. Taraflar arasında, yetkili kişilerin imzasını taşıyan
+ek bir yazılı sözleşme olmaksızın, hiçbir şirket elemanının sözlü ve
+yazılı beyanı, mektup, faks metni, servis formu ve benzeri muhaberat
+özel bir taahhüt olarak kabul edilmeyecektir.
+
+6.  YAZILIM TELİF HAKLARI
+6.1. Yazılım ve dokümantasyonun telif hakları 5846 Sayılı Fikir ve
+Sanat Eserleri Kanunu, Türk Ceza Kanunu, Markalar Kanunu, Markaların
+Korunması Hakkında K.H.K., Türk Ticaret Kanunu ve muhtelif Vergi Kanunu
+hükümleri ile koruma altına alınmıştır. Kullanım lisans hakkı dışında
+kalan hukuka aykırı kopya eylemi ve işlemler, eylemin nevine göre 3
+aydan 3 yıla kadar hapis ve 300 milyon liradan 600 milyon liraya kadar
+ağır para cezası ile yaptırıma bağlanmıştır. 
+6.2. LOGO tarafından temin edilen uygulama yazılımlarının üzerinde
+çalıştığı ve telif hakları LOGO'ya ait olmayan veritabanı ve iletişim
+ağı (network) yazılımlarının geçerli ve yeterli kullanım lisansına sahip
+olunmasından münhasıran MÜŞTERİ sorumludur. 
+
+7. YAZILIM ÜRÜNLERİNİN TESLİMİNE İLİŞKİN KOŞULLAR
+MÜŞTERİ, bu sözleşme ile kullanım lisansını aldığı yazılım ürünlerinin
+sözleşme başlangıcında belirtilen adrese teslimini kabul etmiştir. Bu
+adrese yapılan teslimat geçerli teslimat sayılır. MÜŞTERİ bu adrese
+yapılan teslimlerde teslimatın kendisine yapılmadığı, firma elemanına
+yapılmadığı gibi itirazlarda bulunmayacağını ve bu hakkından peşinen
+feragat ettiğini beyan, kabul ve taahhüt etmiştir.
+
+
+8. DİSKET, CD-ROM, YAZILI DOKÜMAN (DOKÜMANTASYON)
+Sözleşme konusu yazılım ürünlerinin içinde olduğu disket/CD-ROM ve
+birlikte verilen dokümanın telif hakları da LOGO'ya (veya telif hakkı
+LOGO'da olmayan ürünler için, hak sahibi firmaya) aittir. Dokümanların
+değiştirilmesi, başka amaçlarla kullanılması, kopya edilmesi,
+çoğaltılması telif haklarının ihlali anlamına gelir.
+
+9. SÜRÜM/VERSİYON DEĞİŞİMİ VE BAKIM
+LOGO önceden haber vermeksizin yazılımlarında ve yazılı dokümanlarında
+değişiklikler yapma, yazılım ürünlerinin yeni versiyon ve sürümlerini
+çıkarma hakkına sahiptir. MÜŞTERİ bu yeni versiyon veya sürümü ve yeni
+yazılı dokümanı ancak fiyat listelerinde belirtilecek olan
+"yeni versiyona/sürüme geçiş (upgrade)" bedelini ödeyerek
+yeni bir lisans almakla elde edebilir. LOGO ayrıca yeni versiyon
+veya sürümlerin alınması halinde eski versiyon/sürümle girilen veya
+elde edilen bilgilerin yeni versiyon/sürümle de işlenebileceği
+güvencesini vermemektedir. Ancak, LOGO, geleneksel olarak, çıkardığı
+her yeni versiyon için, eski versiyonla işlenmiş verileri yeni
+versiyona aktarmayı sağlayan özel yazılım araçlarını da sağlamaktadır.
+
+Yeni versiyon veya sürümü çıkan bir yazılımın mevcut versiyon veya
+sürümü, yeni versiyon veya sürümün piyasaya çıkış tarihinden itibaren
+2 (iki) yıl süre ile desteklenir. Ancak, mevzuatta meydana gelen
+değişiklikler ve programın çalışmasıyla ilgili düzeltme ve yenilikler
+eski sürüm ve versiyonlara uygulanmaz. 
+İki yıllık süre sonunda eski versiyon veya sürüm üretimden kaldırılır.
+Üretimden kalkan versiyon ve sürümlerin program disketleri,
+dokümantasyonu ve bu yazılımlar için destek hizmeti LOGO'dan temin
+edilemez.
+Aksi taraflar arasında yazılı olarak kararlaştırılmadıkça, LOGO
+uygulama ürünlerinin üzerinde çalıştığı veritabanı ve iletişim
+ağı (network) yazılımlarına destek hizmeti vermek ve bunlardan
+kaynaklanan sorunlara çözüm getirmek LOGO'nun görev ve sorumluluğuna
+girmez. MÜŞTERİ, Sözleşme Özel Hükümlerinde belirlenen hizmetin
+dışında DESTEK hizmeti isterse bu talebini ücreti karşılığında
+ayrı bir Bakım Anlaşması yaparak temin edebilir.
+
+10. SÖZLEŞMENİN BOZUCU ŞARTLA SONA ERMESİ
+10.1.  Aşağıdaki hallerde lisans sözleşmesi başka bir hükme, ihtara
+ihbara gerek olmaksızın bozucu şartla kendiliğinden sona erer.
+10.1.1.  MÜŞTERİ'nin lisans bedelini ödememesi veya eksik ödemesi halinde; 
+10.1.2. MÜŞTERİ'nin LOGO'nun telif haklarını ihlal etmesi halinde.
+10.2. MÜŞTERİ bu durumda, elinde bulunan yazılım ve dokümantasyonu
+sözleşmenin sona erme tarihinden itibaren 7 (yedi) gün içinde başkaca
+bir hükme, ihbara, ihtara gerek olmaksızın LOGO'ya teslim etmekle ve
+bilgisayarlarında yüklü bulunan yazılımın tüm kopyalarını silmekle
+yükümlüdür.
+10.3. Sözleşmenin bozucu şartla sona ermesi halinde, MÜŞTERİ'nin bu
+sözleşme ile üstlenmiş olduğu "bilgisayar yazılımını kullanma lisans
+bedeli" sözleşme akit tarihinden sona erme tarihine kadar olan süreyi
+kapsayan "süreli kullanma lisans bedeli"ne dönüşür. Bu bedel, varsa
+MÜŞTERİ'nin o ana kadar ödemiş olduğu bedelden mahsub edilir, yoksa
+veya yeterli değilse MÜŞTERİ'nin bu bedeli LOGO'ya ödeme yükümlülüğü
+devam eder
+
+11.  SAİR HÜKÜMLER
+11.1.  Bu sözleşmenin imzalanması ile bundan önce taraflar arasında
+bu yazılım lisansı ile ilgili olarak cereyan etmiş karşılıklı yazılı
+ve sözlü teklifler, icap ve kabuller, yazılı anlaşmalar, ticari diğer
+yazışmalar ve taahhütler hükmünü yitirir. Bu Sözleşmeyi tamamlayıcı
+nitelikte olan Büyük Müşteri Sözleşmesi varsa bu hükmün dışındadır.
+11.2. Bu sözleşmedeki hükümler ancak karşılıklı olarak imzalanmış
+ek sözleşmeler ile değiştirilebilir. Bunun dışındaki hiçbir beyan
+ve yazı sözleşmenin tadili anlamına gelmez.
+11.3. Sözleşmenin tarafları maddesinde yazılı adres tarafların akdi
+tebligat adresleri olup bu adrese yapılacak tebligatlar iade olsa
+bile yapılmış sayılır. Bu adres aynı zamanda yazılım ürününün
+teslimat adresidir.
+11.4. Bu sözleşmeden doğacak anlaşmazlıklarda İstanbul (Sultanahmet)
+icra daireleri ve mahkemeleri yetkilidir. Anlaşmazlıklarda TÜRK
+Hukuku uygulanır.
+11.5. Bu sözleşme iki suret olarak düzenlenmiş ve birer suretleri
+imzalanarak karşılıklı olarak verilmiştir.

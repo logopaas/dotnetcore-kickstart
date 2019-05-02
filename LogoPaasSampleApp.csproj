@@ -1,0 +1,65 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <AssemblyName>LogoPaasSampleApp</AssemblyName>
+    <Configurations>Debug;Release;Release_wo_docker</Configurations>
+    <RootNamespace>LogoPaasSampleApp</RootNamespace>
+
+    <Authors>LOGO Group</Authors>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DebugType>portable</DebugType>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <OutputType>Exe</OutputType>
+    <RuntimeIdentifiers>win7-x64;ubuntu.14.04-x64</RuntimeIdentifiers>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+    <NeutralLanguage>tr-TR</NeutralLanguage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Dal\Migrations\PostgreSqlMigrations\" />
+    <Folder Include="Dal\Migrations\SqlServerMigrations\" />
+    <Folder Include="Swagger\" />
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Logo.NAFCore.Common" Version="0.9.52.896" />
+    <PackageReference Include="Logo.NAFCore.Common.Log2Fluentd" Version="0.9.52.896" />
+    <PackageReference Include="Logo.NAFCore.DAL.EF" Version="0.9.52.896" />
+    <PackageReference Include="Logo.NAFCore.Platform.Launcher" Version="0.9.52.896" />
+    <PackageReference Include="Logo.NAFCore.Platform.Services.Hosting" Version="0.9.52.896" />
+    <PackageReference Include="Logo.NAFCore.Platform.UI.Razor" Version="0.9.52.896" />
+    <PackageReference Include="Logo.NAFCore.Services.IDM.WebHelper" Version="0.9.52.896" />
+    <PackageReference Include="Logo.NAFCore.Settings" Version="0.9.52.896" />
+    <PackageReference Include="Logo.NAFCore.Settings.UI" Version="0.9.52.896" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.0.3" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="Views\Home\Index.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
+</Project>
