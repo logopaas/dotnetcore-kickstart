@@ -40,8 +40,7 @@ namespace LogoPaasSampleApp.Controllers
         /// Secures the index.
         /// </summary>
         /// <returns>ActionResult.</returns>
-        [Authorize]
-        [SwaggerOperation("LegacySecureIndex")]
+        [Authorize]        
         public ActionResult SecureIndex()
         {
             string claimInfo = string.Join("<br/> ", User.Claims);
@@ -53,8 +52,7 @@ namespace LogoPaasSampleApp.Controllers
         /// <summary>
         /// Unsecures the index.
         /// </summary>
-        /// <returns>ActionResult.</returns>
-        [SwaggerOperation("LegacyUnsecureIndex")]
+        /// <returns>ActionResult.</returns>        
         public ActionResult UnsecureIndex()
         {
             var a = NSerializer.JSONSimple.Serialize(DateTimeOffset.Now);
@@ -66,14 +64,10 @@ namespace LogoPaasSampleApp.Controllers
         /// <summary>
         /// Logouts this instance.
         /// </summary>
-        /// <returns>ActionResult.</returns>
-        [SwaggerOperation("LegacyLogout")]
+        /// <returns>ActionResult.</returns>        
         public ActionResult Logout()
         {
             return new RedirectResult("/logout");
-            //IDMLegacyWebHelperManager.Logout(Request, Response, returnUrl: Request.BuildAbsolutePathWithQuery().Replace("logout","SecureIndex"));
-
-            //return new EmptyResult();
         }
 
         #endregion

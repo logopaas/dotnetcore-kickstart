@@ -17,8 +17,7 @@ namespace LogoPaasSampleApp.Utils
         private const string CLOUDCONTROLSERVICE_EUREKA_NAME = "CLOUDCONTROL";
         private static ConcurrentDictionary<Guid, object> _tenantAppSettings = new ConcurrentDictionary<Guid, object>();
         public static object GetTenantAppSettingsList(SampleAppSettings appSettings, Guid tenantId)
-        {
-            //Guid tenantId = HttpContextExtensions.GetCurrentContextId();
+        {            
             if (tenantId != Guid.Empty && tenantId != DefaultValueExtensions.LOGO_TenantGuid())
             {
                 object cachedSettings = null;

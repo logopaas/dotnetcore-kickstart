@@ -60,13 +60,24 @@ namespace LogoPaasSampleApp
 
         #region ..Overridde Members..
 
+        /// <summary>
+        /// client_secret or security secret of the application
+        /// </summary>
+        /// <returns></returns>
         protected override Guid BuildSecuritySecret() { return new Guid("85a60f5e-ab96-4a0d-acdb-bab275872aaf"); }
+
+        /// <summary>
+        /// Enable static file provider
+        /// </summary>
+        /// <returns></returns>
         protected override bool UseStaticFiles() { return true; }
+
         /// <summary>
         /// Uses the default route.
         /// </summary>
         /// <returns>Boolean.</returns>
         protected override bool UseDefaultRoute() { return true; }
+
         /// <summary>
         /// Automatics the register security secret.
         /// </summary>

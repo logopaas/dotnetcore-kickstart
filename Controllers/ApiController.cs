@@ -56,7 +56,7 @@ namespace LogoPaasSampleApp.Controllers
         /// <returns>Message Content</returns>
         [HttpPost("/api/addcustomer")]
         [SwaggerGroup("Secure Apis")]
-       // [ClientAuthorize]
+        // [ClientAuthorize]
         public async Task<Customer> AddCustomer([FromBody]Customer c)
         {
             c = await _customerRepo.SaveOrUpdateAsync(c);
