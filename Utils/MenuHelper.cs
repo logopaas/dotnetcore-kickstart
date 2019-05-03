@@ -59,33 +59,5 @@ namespace LogoPaasSampleApp.Utils
 
             return client;
         }
-
-        
-
-        /*
-         [
-              {
-                "AppId": "1076d753-4312-406e-9b9e-75cec8bc22c4",
-                "Url": "http://localhost:5000/",
-                "IsUrlRelative": false,
-                "IsInNewTab": false,
-                "LangResources": [
-                  {
-                    "Lang": "tr-TR",
-                    "Name": "Bayi Sample App",
-                   "Description": "Bayi Sample App",
-                    "Tooltip": "Bayi Sample App",
-                    "TenantId": "dd1f31ef-f6dc-40a5-89bb-a0ac4fbb3a54",
-                    "MenuId": ""
-                  }
-                ],
-                "ChartType": "Area",
-                "TenantId": "dd1f31ef-f6dc-40a5-89bb-a0ac4fbb3a54",
-                "Id": ""
-              }
-        ]
-
-         
-         */
     }
 }
