@@ -9,12 +9,15 @@ using NAFCore.Platform.Services.Client;
 using System.Threading.Tasks;
 using System.Net.Http;
 using LogoPaasSampleApp.Settings;
+using NAFCore.Common.Types.Initialization;
 
 namespace LogoPaasSampleApp.Utils
 {
     public class TenantHelper
     {
         private const string CLOUDCONTROLSERVICE_EUREKA_NAME = "CLOUDCONTROL";
+        private const string CLOUDCONTROLSERVICE_BASE_API_PATH = "/v1_0/NAF.Services.CloudControl.ApiWebService/";
+
         private static ConcurrentDictionary<Guid, object> _tenantAppSettings = new ConcurrentDictionary<Guid, object>();
         public static object GetTenantAppSettingsList(SampleAppSettings appSettings, Guid tenantId)
         {            
@@ -39,14 +42,14 @@ namespace LogoPaasSampleApp.Utils
         {
             return new Guid("dd1f31ef-f6dc-40a5-89bb-a0ac4fbb3a54");
 
-            // Uncommet to fetch tenantid from 'ctxid' http header
+            // Uncoment to fetch tenantid from 'ctxid' http header
             //return HttpContextExtensions.GetCurrentContextId();
         }
 
         private static async Task<JArray> Inner_GetTenantAppSettings(SampleAppSettings appSettings, Guid tenantId)
         {
-            var apiPath = "/v1_0/NAF.Services.CloudControl.ApiWebService/api/tenants/{0}/applicationSegments/{1}/settings";
-            apiPath = string.Format(apiPath, tenantId, "f0af89f4-c98a-4b95-815e-ae47c8a90d56");
+            var apiPath = CLOUDCONTROLSERVICE_BASE_API_PATH + "api/tenants/{0}/applicationSegments/{1}/settings";
+            apiPath = string.Format(apiPath, tenantId, NAFInitializationInfo.Current.AppSecurityID.ToString());
             //
             var client = GetCloudControlClient(appSettings);
             var result = await client.GetAsync(apiPath).ConfigureAwait(false);
@@ -64,10 +67,10 @@ namespace LogoPaasSampleApp.Utils
             //
             var client = requestUri.NewClient();
             if (!client.DefaultRequestHeaders.Contains("client_id"))
-                client.DefaultRequestHeaders.Add("client_id", "f0af89f4-c98a-4b95-815e-ae47c8a90d56");
+                client.DefaultRequestHeaders.Add("client_id", NAFInitializationInfo.Current.AppSecurityID.ToString());
 
             if (!client.DefaultRequestHeaders.Contains("client_secret"))
-                client.DefaultRequestHeaders.Add("client_secret", "85a60f5e-ab96-4a0d-acdb-bab275872aaf");
+                client.DefaultRequestHeaders.Add("client_secret", Startup.GetSecuritySecret().ToString());
 
             return client;
         }

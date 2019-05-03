@@ -37,9 +37,17 @@ namespace LogoPaasSampleApp.Settings
         [NDescription("Sample App DB Connection Info")]
         public SampleAppDbSettings DbSettings { get; set; } = new SampleAppDbSettings();
 
-        [NDisplayName("Cloud Control Service Addr")]
-        [NDescription("Cloud Control Service Addr")]
+        [NDisplayName("Cloud Control Service Address")]
+        [NDescription("Cloud Control Service Address")]
         public string CloudControlServiceAddr { get; set; } = "dev-win.logo-paas.com:8282";
+
+        [NDisplayName("Cloud Control Service Address")]
+        [NDescription("Cloud Control Service Address")]
+        public string MenuServiceAddr { get; set; } = "dev-linux.logo-paas.com:7000";
+
+        [NDisplayName("Menu Registration Address")]
+        [NDescription("Menu Registration Address")]
+        public string MenuRegistrationUrl { get; set; } = "http://localhost:5000/";
 
         public void Initialize()
         {                        

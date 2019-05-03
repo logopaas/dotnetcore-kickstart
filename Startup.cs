@@ -10,7 +10,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.IdentityModel.Protocols;
+using NAFCore.Common.Attributes;
 using NAFCore.Common.Log2Fluentd;
+using NAFCore.Common.Types.Initialization;
 using NAFCore.Common.Utils.Diagnostics.Logger;
 using NAFCore.Common.Utils.Extensions;
 using NAFCore.DAL.Core;
@@ -58,13 +61,29 @@ namespace LogoPaasSampleApp
 
         #endregion
 
+        #region ..Static..
+
+        /// <summary>
+        /// client_secret or security secret of the application
+        /// </summary>
+        /// <returns></returns>
+        public static Guid GetSecuritySecret()
+        {
+            return new Guid("85a60f5e-ab96-4a0d-acdb-bab275872aaf");
+        }
+
+        #endregion
+
         #region ..Overridde Members..
 
         /// <summary>
         /// client_secret or security secret of the application
         /// </summary>
         /// <returns></returns>
-        protected override Guid BuildSecuritySecret() { return new Guid("85a60f5e-ab96-4a0d-acdb-bab275872aaf"); }
+        protected override Guid BuildSecuritySecret()
+        {
+            return GetSecuritySecret();
+        }
 
         /// <summary>
         /// Enable static file provider
@@ -99,11 +118,11 @@ namespace LogoPaasSampleApp
         {
             jsonOptions.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver();
 
-            jsonOptions.SerializerSettings.DateFormatString = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";            
+            jsonOptions.SerializerSettings.DateFormatString = "yyyy-MM-dd'T'HH:mm:ss.fffzzz";
         }
 
         protected override void DoAddServices(IServiceCollection services)
-        {            
+        {
             services.AddIDMWebHelper();
 
             //
@@ -118,14 +137,14 @@ namespace LogoPaasSampleApp
             // use settings UI
             app.UseSettingsUI("/api/settings/");
 
-            app.UseIDMWebHelper(new WebHelperSettings());            
+            app.UseIDMWebHelper(new WebHelperSettings());
 
             try
             {
                 if (_sampleAppSettings.DbSettings.MigrateDatabase)
                 {
                     var context = app.ApplicationServices.GetService<DbContext>();
-                     context.Database.Migrate();
+                    context.Database.Migrate();
                 }
                 app.UseMvc(routes =>
                 {
@@ -138,6 +157,25 @@ namespace LogoPaasSampleApp
             {
                 NLogger.Instance().Error(ex);
             }
+
+            // Register this app to Menu service
+            MenuHelper.RegisterToMenuService(_sampleAppSettings, new MenuRegistrationRequest()
+            {
+                AppId = NAFInitializationInfo.Current.AppSecurityID.ToString(),
+                LangResources = new MenuRegistrationLangResource[] {
+                    new MenuRegistrationLangResource() {
+                        Lang= "tr-TR",
+                        Name= "Bayi Sample App",
+                        Description= "Bayi Sample App",
+                        Tooltip= "Bayi Sample App",
+                        TenantId= TenantHelper.GetCurrentTenantId(_sampleAppSettings).ToString(),
+                        MenuId= NAFInitializationInfo.Current.AppSecurityID.ToString()
+                    }
+                },
+                TenantId = TenantHelper.GetCurrentTenantId(_sampleAppSettings).ToString(),
+                Url = _sampleAppSettings.MenuRegistrationUrl,
+                Id = NAFInitializationInfo.Current.AppSecurityID.ToString()
+            });
         }
 
         protected override void InitializeApp(IServiceCollection services)
@@ -170,11 +208,11 @@ namespace LogoPaasSampleApp
             var tenantAppSettings = ((JArray)tenantSettingsList)[0];
             string serverAddr = tenantAppSettings["ServerAddress"].ToString();
             int dbType = tenantAppSettings["DBType"].ToInt();
-            string dbName = tenantAppSettings["DBName"].ToString();            
+            string dbName = tenantAppSettings["DBName"].ToString();
             int? port = tenantAppSettings["Port"].ToInt();
             string serverUsername = tenantAppSettings["ServerUsername"].ToString();
             string serverPassword = tenantAppSettings["ServerPassword"].ToString();
-            string schemaName = tenantAppSettings["SchemaName"].ToString();            
+            string schemaName = tenantAppSettings["SchemaName"].ToString();
 
             if (dbType == (int)DBTypes.MSSQL)
             {
@@ -195,7 +233,7 @@ namespace LogoPaasSampleApp
             var dbInitializer = new DbInitializer(dbContext);
             dbInitializer.Initialize();
 
-            return dbContext;            
+            return dbContext;
         }
 
         private void GetDbContextOptions<TContext>(DbContextOptionsBuilder<TContext> optionsBuilder, string connectionString, int? DBType, string schemaName) where TContext : DbContext
@@ -252,7 +290,7 @@ namespace LogoPaasSampleApp
                 return false;
             }
         }
-        
+
         #endregion
     }
 
