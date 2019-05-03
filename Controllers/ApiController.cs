@@ -135,6 +135,21 @@ namespace LogoPaasSampleApp.Controllers
             return _sampleDIService.MessageEcho(msg, string.Empty);
         }
 
+        /// <summary>
+        /// Send message to kafka
+        /// </summary>
+        /// <param name="msg">Message Content</param>
+        /// <returns>Message Content</returns>
+        [HttpPost("/api/sendmessagetokafka")]
+        [SwaggerGroup("Secure Apis")]
+        [SecurityInfoValidation]
+        public string SendMessageToKafka(string msg)
+        {
+            msg = "Hello from security info validated api, the message is:" + msg;
+            InternalMessagingHelper.Instance().SendMessage(new SampleInternalMessageDTO() { NewCustomerId = msg }, InternalMessagingHelper.TOPIC_SAMPLE_MESSAGE);
+            return _sampleDIService.MessageEcho(msg, string.Empty);
+        }
+
         #endregion
     }
 }

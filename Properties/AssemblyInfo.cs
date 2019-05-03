@@ -34,5 +34,5 @@ using NAFCore.Platform.Services.Client;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 
 // SecurityId
-[assembly: NAFSecurityId("f0af89f4-c98a-4b95-815e-ae47c8a90d56", "Services")]
+[assembly: NAFSecurityId("c1a20a7f-a4a4-4fc4-b5d3-40a27b101dcb", "Services")]
 [assembly: NResourceEnumTypes(typeof(LogoPaasSampleApp.Resource.ResourceEnum))]

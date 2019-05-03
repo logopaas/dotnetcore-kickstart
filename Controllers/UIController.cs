@@ -52,11 +52,9 @@ namespace LogoPaasSampleApp.Controllers
         /// <summary>
         /// Unsecures the index.
         /// </summary>
-        /// <returns>ActionResult.</returns>        
+        /// <returns>ActionResult.</returns>                
         public ActionResult UnsecureIndex()
         {
-            var a = NSerializer.JSONSimple.Serialize(DateTimeOffset.Now);
-            var b = NSerializer.JSONSimple.Serialize(DateTime.Now);
             ViewBag.UserInfo = "";
             return View();
         }

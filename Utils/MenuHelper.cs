@@ -40,6 +40,8 @@ namespace LogoPaasSampleApp.Utils
                 var responseContent = await result.Content.ReadAsStringAsync().ConfigureAwait(false);
                 NLogger.Instance().Error($"Menu registration error: {responseContent}");
             }
+            else
+                NLogger.Instance().Info($"Menu registration completed");
         }
 
         private static HttpClient GetMenuClient(SampleAppSettings appSettings)

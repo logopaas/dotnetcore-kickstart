@@ -37,7 +37,7 @@
                     @if (User.Identity.IsAuthenticated)
                     {
                         @*<li><a asp-area="" asp-controller="Home" asp-action="Logout">Logout</a></li>*@
-                        <li><a href="/logout">Logout</a></li>
+                        <li id="logoutBtn"><a href="/logout">Logout</a></li>
                     }
                 </ul>
             </div>
@@ -50,6 +50,21 @@
             <p>&copy; 2019 - LogoPaasSampleApp</p>
         </footer>
     </div>
+    <script>
+        function inIframe () {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+
+        if (inIframe()) {
+            var divOne = document.getElementById('logoutBtn');
+            divOne.style.display='none';            
+        }
+
+    </script>
 
     <environment names="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>

@@ -40,7 +40,7 @@ namespace LogoPaasSampleApp.Utils
 
         public static Guid GetCurrentTenantId(SampleAppSettings appSettings)
         {
-            return new Guid("dd1f31ef-f6dc-40a5-89bb-a0ac4fbb3a54");
+            return new Guid("96db0bb9-0fa8-4210-ba7e-4d2d0fd8eb94");
 
             // Uncoment to fetch tenantid from 'ctxid' http header
             //return HttpContextExtensions.GetCurrentContextId();

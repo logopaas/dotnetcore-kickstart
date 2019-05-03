@@ -21,6 +21,7 @@ using NAFCore.DAL.EF.Core;
 using NAFCore.DAL.EF.Extensions;
 using NAFCore.DAL.EF.MultiTenancy;
 using NAFCore.DAL.EF.Repositories;
+using NAFCore.InternalMessaging.Client;
 using NAFCore.Platform.Services.Hosting.Types;
 using NAFCore.Platform.UI.Razor;
 using NAFCore.Services.IDM.WebHelper;
@@ -69,7 +70,7 @@ namespace LogoPaasSampleApp
         /// <returns></returns>
         public static Guid GetSecuritySecret()
         {
-            return new Guid("85a60f5e-ab96-4a0d-acdb-bab275872aaf");
+            return new Guid("d2932780-68ea-48f4-9a81-da4171881d17");
         }
 
         #endregion
@@ -134,6 +135,20 @@ namespace LogoPaasSampleApp
 
         protected override void DoUseStartServices(IApplicationBuilder app, IApplicationLifetime appLifetime)
         {
+            app.Use(async (context, next) =>
+            {
+                string menuServiceAddr = _sampleAppSettings.MenuRegistrationUrl;
+                menuServiceAddr = menuServiceAddr.StartsWith("http") ? menuServiceAddr : string.Concat("http://", menuServiceAddr);
+                menuServiceAddr = menuServiceAddr.EndsWith("/") ? menuServiceAddr : string.Concat(menuServiceAddr, "/");
+
+                if (!context.Response.Headers.ContainsKey("X-Frame-Options"))
+                    context.Response.Headers.Add("X-Frame-Options", "allow-from " + menuServiceAddr);
+                else
+                    context.Response.Headers["X-Frame-Options"] = "allow-from " + menuServiceAddr;
+
+                await next();
+            });
+
             // use settings UI
             app.UseSettingsUI("/api/settings/");
 
@@ -168,16 +183,19 @@ namespace LogoPaasSampleApp
                         Name= "Bayi Sample App",
                         Description= "Bayi Sample App",
                         Tooltip= "Bayi Sample App",
-                        TenantId= TenantHelper.GetCurrentTenantId(_sampleAppSettings).ToString(),
-                        MenuId= NAFInitializationInfo.Current.AppSecurityID.ToString()
+                        TenantId= Guid.Empty.ToString(), 
+                        MenuId= "7637b81b-ac2d-41e8-a1f5-9472ab17076c"
                     }
                 },
-                TenantId = TenantHelper.GetCurrentTenantId(_sampleAppSettings).ToString(),
+                TenantId = Guid.Empty.ToString(), 
                 Url = _sampleAppSettings.MenuRegistrationUrl,
-                Id = NAFInitializationInfo.Current.AppSecurityID.ToString()
+                Id = "1b480958-242b-4ed2-93e4-49bffbb8202b"
             });
-        }
 
+            // Start Kafka Client
+            //app.UseInternalMessagingClient();
+        }
+        
         protected override void InitializeApp(IServiceCollection services)
         {
             _sampleAppSettings = NAFSettings.Current.ReadAppSettings<SampleAppSettings>(throwIfNotFound: false) ?? new SampleAppSettings(true);
@@ -194,7 +212,20 @@ namespace LogoPaasSampleApp
                 return ResolveDbContext(provider);
             });
 
-            services.AddSingleton(_sampleAppSettings);            
+            // Add current settings
+            services.AddSingleton(_sampleAppSettings);
+
+            //Add kafka client
+            //InternalMessagingClientExtensions.AddInternalMessagingClient(NAFSettings.Current, new NAFCore.InternalMessaging.Client.Settings.InternalMessagingClientInstanceInfo()
+            //{
+            //    OnReceiveMessage = (message) =>
+            //    {
+            //        NLogger.Instance().Info("New message:" + message.Payload);
+            //    },
+            //    OwnTopicsInfo = InternalMessagingHelper.Instance().GetOwnTopicsInfo(),
+            //    SubscriptionTopicIds = new System.Collections.Generic.List<string>() { "kafkadiagnose" },
+            //    ClientType = NAFCore.InternalMessaging.Client.Settings.MessagingClientType.ProducerConsumer,
+            //});
         }
 
         private SampleAppBaseContext ResolveDbContext(IServiceProvider provider)
@@ -285,6 +316,10 @@ namespace LogoPaasSampleApp
             /// <value>The callback path.</value>
             public override string CallbackPath { get { return "/home/index"; } }
 
+            /// <summary>
+            /// Resove idm adress from eureka for browser redirection
+            /// </summary>
+            /// <returns></returns>
             public override bool ResolveIDMAddressFromEurekaForBrowserRedirection()
             {
                 return false;
@@ -294,6 +329,9 @@ namespace LogoPaasSampleApp
         #endregion
     }
 
+    /// <summary>
+    /// DF db context factory
+    /// </summary>
     public class SampleAppDbContextFactory : IModelCacheKeyFactory
     {
         public object Create(DbContext context)

@@ -35,6 +35,7 @@
     <PackageReference Include="Logo.NAFCore.Common" Version="0.9.52.896" />
     <PackageReference Include="Logo.NAFCore.Common.Log2Fluentd" Version="0.9.52.896" />
     <PackageReference Include="Logo.NAFCore.DAL.EF" Version="0.9.52.896" />
+    <PackageReference Include="Logo.NAFCore.InternalMessaging" Version="0.9.52.896" />
     <PackageReference Include="Logo.NAFCore.Platform.Launcher" Version="0.9.52.896" />
     <PackageReference Include="Logo.NAFCore.Platform.Services.Hosting" Version="0.9.52.896" />
     <PackageReference Include="Logo.NAFCore.Platform.UI.Razor" Version="0.9.52.896" />
