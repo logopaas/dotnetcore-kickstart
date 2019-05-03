@@ -188,7 +188,7 @@ namespace LogoPaasSampleApp
                     }
                 },
                 TenantId = Guid.Empty.ToString(), 
-                Url = _sampleAppSettings.MenuRegistrationUrl,
+                Url = "http://bayiegitim.logo-paas.com:5000/", //_sampleAppSettings.MenuRegistrationUrl,
                 Id = "1b480958-242b-4ed2-93e4-49bffbb8202b"
             });
 
