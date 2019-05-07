@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using NAFCore.Common.Utils.Serialization;
 using System;
+using System.Linq;
 
 namespace LogoPaasSampleApp.Controllers
 {
@@ -43,6 +44,8 @@ namespace LogoPaasSampleApp.Controllers
         [Authorize]        
         public ActionResult SecureIndex()
         {
+            var currentToken = User.Claims.Where(t => t.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/authentication").FirstOrDefault()?.Value;
+
             string claimInfo = string.Join("<br/> ", User.Claims);
             ViewBag.UserInfo = claimInfo;
 

@@ -102,6 +102,8 @@ namespace LogoPaasSampleApp.Controllers
             string claimInfo = string.Join(", ", User.Claims);
             msg = "Hello from secure user api, the message is:" + msg;
 
+            var currentToken = Request.Headers["Authorization"];            
+
             return _sampleDIService.MessageEcho(msg, claimInfo);
         }
 
@@ -115,7 +117,7 @@ namespace LogoPaasSampleApp.Controllers
         [SecurityInfoValidation]
         public string SecureAppEchoApi(string msg)
         {            
-            msg = "Hello from security info validated api, the message is:" + msg;
+            msg = "Hello from security info validated api, the message is:" + msg;            
 
             return _sampleDIService.MessageEcho(msg, string.Empty);
         }
