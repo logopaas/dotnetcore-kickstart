@@ -39,7 +39,7 @@ namespace LogoPaasSampleApp.Settings
 
         [NDisplayName("Cloud Control Service Address")]
         [NDescription("Cloud Control Service Address")]
-        public string CloudControlServiceAddr { get; set; } = "dev-win.logo-paas.com:8282";
+        public string CloudControlServiceAddr { get; set; } = "dev-linux.logo-paas.com:6900";
 
         [NDisplayName("Cloud Control Service Address")]
         [NDescription("Cloud Control Service Address")]
