@@ -15,8 +15,8 @@ namespace LogoPaasSampleApp.Utils
 {
     public class TenantHelper
     {
-        private const string CLOUDCONTROLSERVICE_EUREKA_NAME = "CLOUDCONTROL";
-        private const string CLOUDCONTROLSERVICE_BASE_API_PATH = "/v1_0/NAF.Services.CloudControl.ApiWebService/";
+        private const string CLOUDCONTROLSERVICE_EUREKA_NAME = "NAFCORESERVICESCLOUDCONTROL";
+        private const string CLOUDCONTROLSERVICE_BASE_API_PATH = "";
 
         private static ConcurrentDictionary<Guid, object> _tenantAppSettings = new ConcurrentDictionary<Guid, object>();
         public static object GetTenantAppSettingsList(SampleAppSettings appSettings, Guid tenantId)
