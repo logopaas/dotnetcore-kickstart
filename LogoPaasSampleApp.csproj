@@ -32,16 +32,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Logo.NAFCore.Common" Version="0.9.52.896" />
-    <PackageReference Include="Logo.NAFCore.Common.Log2Fluentd" Version="0.9.52.896" />
-    <PackageReference Include="Logo.NAFCore.DAL.EF" Version="0.9.52.896" />
-    <PackageReference Include="Logo.NAFCore.InternalMessaging" Version="0.9.52.896" />
-    <PackageReference Include="Logo.NAFCore.Platform.Launcher" Version="0.9.52.896" />
-    <PackageReference Include="Logo.NAFCore.Platform.Services.Hosting" Version="0.9.52.896" />
-    <PackageReference Include="Logo.NAFCore.Platform.UI.Razor" Version="0.9.52.896" />
-    <PackageReference Include="Logo.NAFCore.Services.IDM.WebHelper" Version="0.9.52.896" />
-    <PackageReference Include="Logo.NAFCore.Settings" Version="0.9.52.896" />
-    <PackageReference Include="Logo.NAFCore.Settings.UI" Version="0.9.52.896" />
+    <PackageReference Include="Logo.NAFCore.Common" Version="1.12.62.1391" />
+    <PackageReference Include="Logo.NAFCore.Common.Log2Fluentd" Version="1.12.62.1391" />
+    <PackageReference Include="Logo.NAFCore.DAL.EF" Version="1.12.62.1391" />
+    <PackageReference Include="Logo.NAFCore.InternalMessaging" Version="1.12.62.1391" />
+    <PackageReference Include="Logo.NAFCore.Platform.Launcher" Version="1.12.62.1391" />
+    <PackageReference Include="Logo.NAFCore.Platform.Services.Hosting" Version="1.12.62.1391" />
+    <PackageReference Include="Logo.NAFCore.Platform.UI.Razor" Version="1.12.62.1391" />
+    <PackageReference Include="Logo.NAFCore.Services.IDM.WebHelper" Version="1.12.62.1391" />
+    <PackageReference Include="Logo.NAFCore.Settings" Version="1.12.62.1391" />
+    <PackageReference Include="Logo.NAFCore.Settings.UI" Version="1.12.62.1391" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Cookies" Version="2.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.3" />
