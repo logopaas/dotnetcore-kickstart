@@ -1,4 +1,5 @@
 ﻿using LogoPaasSampleApp.Dal;
+using LogoPaasSampleApp.Diagnostic;
 using LogoPaasSampleApp.DIServices.Imp;
 using LogoPaasSampleApp.DIServices.Interface;
 using LogoPaasSampleApp.Settings;
@@ -21,6 +22,8 @@ using NAFCore.DAL.EF.Core;
 using NAFCore.DAL.EF.Extensions;
 using NAFCore.DAL.EF.MultiTenancy;
 using NAFCore.DAL.EF.Repositories;
+using NAFCore.Diagnostics;
+using NAFCore.Diagnostics.Model.Interfaces;
 using NAFCore.InternalMessaging.Client;
 using NAFCore.Platform.Services.Hosting.Types;
 using NAFCore.Platform.UI.Razor;
@@ -291,13 +294,16 @@ namespace LogoPaasSampleApp
                 NLogger.Instance().Error($"DBtype='{DBType}' is not supported  for tenant={ TenantHelper.GetCurrentTenantId(_sampleAppSettings) }");
             }
         }
-
         /// <summary>
         /// Does the configure diagnostics.
         /// </summary>
         /// <param name="services">The services.</param>
         protected override void DoConfigureDiagnostics(IServiceCollection services)
         {
+            DiagnosticExtensions.AddDiagnosisActions(NAFSettings.Current, new Assembly[] { Assembly.GetExecutingAssembly() });
+
+            var settings = NAFSettings.Current.ReadAppSettings<SampleAppSettings>(throwIfNotFound: false) ?? new SampleAppSettings();
+            services.AddSingleton<IDiagnosisService>(new GenericDiagnosisService(settings));
         }
 
         /// <summary>
